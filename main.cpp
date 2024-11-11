@@ -1,9 +1,30 @@
 // header contain a functions, classes, and variables with extenstion .h or .hpp
 // library is a complied code that has functions and classes with extension .lib, .a, .dll
 #include <iostream>
-
+using namespace std;
 
 int main() {
+
+    std::cout << "Can you C me?" << std::endl;
+
+    // types in c
+    // int, float, double, char, void, bool, short, long, long long, unsigned, signed
+    int myInt = 10; // 4 bytes integer is number without decimal
+    float myFloat = 3.14f; // 4 bytes float is number with decimal
+    double myDouble = 2.71828; // 8 bytes double is number with decimal
+    char myChar = 'A'; // 1 byte char is single character
+    bool myBool = true; // 1 byte bool is true or false
+    short myShort = 5; // 2 bytes short is short integer
+    long myLong = 1000000l; // 4 bytes long is long integer
+    long long myLongLong = 10000000000ll; // 8 bytes long long is long long integer
+    unsigned int myUnsigned = 0u; // 4 bytes unsigned is positive integer
+    signed int mySigned = -1; // 4 bytes signed is negative or positive integer same as int
+
+    // overflow example  
+    int intMax = INT_MAX;
+    cout << intMax << endl;
+    intMax = intMax + 1;
+    cout << intMax << endl;
 
     return 0;
 }
