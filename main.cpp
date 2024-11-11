@@ -11,6 +11,10 @@ void printHello() {
     cout << "Hello, C++" << endl;
 }
 
+void increment(int* a) {
+    *a = *a + 1;
+}
+
 int main() {
 
     std::cout << "Can you C me?" << std::endl;
@@ -80,6 +84,60 @@ int main() {
     cout << add(1, 2) << endl;
 
     printHello();
+
+    // pointer 
+    int* myPointer = &myInt; // int* is pointer to integer and & is address of operator
+    cout << myPointer << endl; // print address
+    cout << *myPointer << endl; // print value at address
+    cout << &myInt << endl; // print address
+    cout << *&myPointer << endl; // print address
+    cout << &*myPointer << endl; // print address
+
+    // reference
+    int& myReference = myInt; // int& is reference to integer
+    cout << myReference << endl; // print value
+    cout << &myReference << endl; // print address
+
+
+
+    // namespace
+    cout << "Can you C++ me?" << endl;
+
+    int num = 1;
+    increment(&num);
+    cout << num << endl;
+
+    // Dynamic memory allocation
+    int* myDynamicArray = new int[5];
+    myDynamicArray[0] = 1;
+    myDynamicArray[1] = 2;
+    myDynamicArray[2] = 3;
+    myDynamicArray[3] = 4;
+    myDynamicArray[4] = 5;
+    cout << myDynamicArray[0] << endl;
+    delete[] myDynamicArray;
+
+    // union 
+    union myUnion {
+        int x;
+        float y;
+    };
+    myUnion u;
+    u.x = 10;
+    cout << u.x << endl;
+    cout << u.y << endl;
+
+    // enum
+
+    enum myEnum {
+        RED,
+        GREEN,
+        BLUE
+    };
+
+    myEnum color = RED;
+    cout << color << endl;
+    
 
     return 0;
 }
