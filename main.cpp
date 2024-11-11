@@ -3,6 +3,14 @@
 #include <iostream>
 using namespace std;
 
+int add(int a, int b) {
+    return a + b;
+}
+
+void printHello() {
+    cout << "Hello, C++" << endl;
+}
+
 int main() {
 
     std::cout << "Can you C me?" << std::endl;
@@ -26,8 +34,56 @@ int main() {
     intMax = intMax + 1;
     cout << intMax << endl;
 
+    // underflow example
+    int intMin = INT_MIN;
+    cout << intMin << endl;
+    intMin = intMin - 1;
+    cout << intMin << endl;
+
+
+    // c++ string
+    string myString = "Hello, C++";
+    cout << myString << endl;
+
+
+    // vector/array
+    int myArray[5] = {1, 2, 3, 4, 5};
+    cout << myArray[0] << endl;
+
+
+    // Jump statements
+    // loop 
+    for (int i = 0; i < 5; i++) {
+        cout << myArray[i] << endl;
+    }
+
+    while(myInt > 0) {
+        cout << myInt << endl;
+        myInt--;
+    }
+
+    do {
+        cout << myInt << endl;
+        myInt++;
+    } while (myInt < 10);
+
+    // if else 
+    if (myInt == 10) {
+        cout << "myInt is 10" << endl;
+    } else if (myInt == 9) {
+        cout << "myInt is 9" << endl;
+    } else {
+        cout << "myInt is not 10 or 9" << endl;
+    }
+
+    // function 
+    cout << add(1, 2) << endl;
+
+    printHello();
+
     return 0;
 }
+
 
 
 // Header
