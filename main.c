@@ -20,9 +20,21 @@
 
 #include <stdio.h>
 
+int getBirthYear(int age) {
+    return 2024 - age;
+}
+
+
 int main() {
 
     printf("Hello, C\n");
+
+    int age;
+    scanf("%d", &age);
+
+    int birthYear = getBirthYear(age);
+    printf("Your birth year is %d\n", birthYear);
+
     return 0;
 
 }
